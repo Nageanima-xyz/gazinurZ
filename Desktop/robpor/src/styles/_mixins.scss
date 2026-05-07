@@ -1,0 +1,46 @@
+@use 'variables' as *;
+
+@mixin glass($blur: 12px, $bg: rgba(13, 13, 31, 0.7)) {
+  background: $bg;
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+}
+
+@mixin glow($color, $size: 20px) {
+  box-shadow: 0 0 $size rgba($color, 0.5), 0 0 calc($size * 2) rgba($color, 0.2);
+}
+
+@mixin glow-text($color) {
+  text-shadow: 0 0 20px rgba($color, 0.8), 0 0 40px rgba($color, 0.4);
+}
+
+@mixin gradient-border($radius: 14px) {
+  position: relative;
+  border-radius: $radius;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: calc($radius + 1px);
+    background: $grad-purple-cyan;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin respond($bp) {
+  @if $bp == sm { @media (max-width: #{$bp-sm}) { @content; } }
+  @else if $bp == md { @media (max-width: #{$bp-md}) { @content; } }
+  @else if $bp == lg { @media (max-width: #{$bp-lg}) { @content; } }
+  @else if $bp == xl { @media (max-width: #{$bp-xl}) { @content; } }
+}

@@ -1,0 +1,47 @@
+// === COLORS ===
+$bg-deep: #030308;
+$bg-dark: #080812;
+$bg-card: #0d0d1f;
+$bg-card-hover: #12122a;
+
+$purple-primary: #7c3aed;
+$purple-light: #a855f7;
+$purple-glow: rgba(124, 58, 237, 0.4);
+
+$cyan-primary: #00d4ff;
+$cyan-light: #67e8f9;
+$cyan-glow: rgba(0, 212, 255, 0.35);
+
+$green-neon: #10d9a0;
+$green-glow: rgba(16, 217, 160, 0.35);
+
+$text-primary: #f0f0ff;
+$text-secondary: #8888aa;
+$text-muted: #4a4a6a;
+
+$border-subtle: rgba(255, 255, 255, 0.06);
+$border-glow: rgba(124, 58, 237, 0.5);
+
+// === GRADIENTS ===
+$grad-purple-cyan: linear-gradient(135deg, $purple-primary, $cyan-primary);
+$grad-purple-green: linear-gradient(135deg, $purple-primary, $green-neon);
+$grad-card: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(0, 212, 255, 0.04));
+$grad-bg: radial-gradient(ellipse at 20% 20%, rgba(124, 58, 237, 0.12) 0%, transparent 60%),
+          radial-gradient(ellipse at 80% 80%, rgba(0, 212, 255, 0.08) 0%, transparent 60%),
+          $bg-deep;
+
+// === TYPOGRAPHY ===
+$font-heading: 'Orbitron', monospace;
+$font-body: 'Space Grotesk', sans-serif;
+
+// === SPACING ===
+$radius-sm: 8px;
+$radius-md: 14px;
+$radius-lg: 20px;
+$radius-xl: 28px;
+
+// === BREAKPOINTS ===
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
